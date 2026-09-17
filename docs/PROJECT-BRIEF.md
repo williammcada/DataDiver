@@ -1,95 +1,83 @@
 # Project Brief — DataDiver
 
-**Brief status:** Migration baseline / requires source verification where noted  
-**Brief version:** 0.1  
-**Last updated:** 18 September 2026  
-**Owner:** William McAda  
-**Product credit:** A WILLIAM MCADA PRODUCT  
-**Handbook repository:** `williammcada/mcada-project-handbook`  
-**Handbook baseline:** `6557a45aaa6d29d7d1abde808e6d0ac248b08820 (AI-START-HERE.md); UNIVERSAL-RULES.md @ aed6fe311aa2e88983f862a30a2d8f05d2ffc04d`  
-**Repository:** `williammcada/DataDiver`  
-**Canonical source status:** TO ESTABLISH from the latest known-good DataDiver application/source.  
-**Current project state:** Existing analytics concept/application with established report sections; exact current version and source must be verified.
+**Brief version:** 0.2 — audited documentation revision  
+**Owner:** William McAda · **Credit:** A WILLIAM MCADA PRODUCT  
+**Status:** Revised record for owner review; not an application release or fresh feature approval.  
+**Repository destination:** williammcada/DataDiver (verify existence/current branch before source edits).  
+**Current running version:** Not independently verified in this documentation task.  
+**Source/baseline:** Existing DataDiver.html recorded; DataDiver_NEW.html also recorded. Compare bytes/features before selecting canonical copy; no assumption based on filename.  
+**Next work:** Identify current offline source and preserve statistical/reporting behavior.
 
-## 1. Purpose and audience
+## 1. Purpose, audience and detailed scope
 
-DataDiver is an institutional assessment-analysis application for overview metrics, item exploration, teacher reports, school reports, method documentation, and formal data-dive reporting.
+- Local browser-only benchmark analytics for teacher data dives; no installation or required internet. Import GradeCam workbooks and retain data provenance.
+- Preserve OVERVIEW, ITEM EXPLORER, TEACHER REPORTS, SCHOOL REPORT, METHOD and DATA DIVE REPORT.
+- Teacher comparisons use the rest of school; school comparisons use the rest of network, avoiding inclusion of the target in its comparator.
+- Normalize item performance to 0–100%; reconstruct item means/variance from response counts. Preserve two-sided Welch testing and Benjamini–Hochberg FDR, recorded default q<.05.
+- Recorded interpretation: Same range for gaps under five points; Unclear for larger nonsignificant gaps. Preserve Priority/Monitor/Aligned/Strength definitions as implemented, but do not infer their thresholds from names alone.
+- Explain denominators, missing/small-sample behavior, test assumptions and multiple-comparison family. Keep raw difference, significance and instructional interpretation distinct.
+- Retain teacher/school/network reports, item statistics, reteach reports and supported PDF/print/XLSX outputs with branding; verify exact menu against canonical source.
+- DataDiver is institutional analytics, not GradePal's individual persistent learner model; no automatic ecosystem integration.
 
-**Primary audience / operator:** Teachers, instructional leaders, and school administrators analyzing assessment performance.
+## 2. This task and boundaries
 
-## 2. Standards selection
+This revision repairs documentation only. It does not implement features, run application tests, upload source, deploy a site, or alter a repository. Retain the exact current source before implementation. Historical reported functionality is a preservation checklist to reconcile against that source, not permission to recreate the program from prose.
 
-**Universal baseline:** U-01 through U-08 where applicable.
+## 3. Standards and adoption
 
-**Conditional modules:** S-02 Curriculum/Assessment/Evidence; S-04 Distribution/Deployment as applicable
+[Canonical handbook](https://github.com/williammcada/mcada-project-handbook). File blob revisions consulted: AI-START-HERE.md 6557a45aaa6d29d7d1abde808e6d0ac248b08820; UNIVERSAL-RULES.md aed6fe311aa2e88983f862a30a2d8f05d2ffc04d; CONDITIONAL-STANDARDS.md dad2d3a05ca0f18260196ea51ac6351bffffdc1c; PROJECT-TEMPLATE.md 574f4c6fcf19ecc2f9e27582fd856fb08123e8da. These are file blobs, not repository commit SHAs.
 
-Apply only the selected modules and project-local requirements. Do not import restrictions from unrelated projects.
+Relevant rules: U-01 identity, U-02 help, U-03 input validation, U-04 unambiguous math/text where applicable, U-05 reader/device, U-06 preservation, U-07 verification, U-08 local scope. Conditional selection: S-02, S-04.
+Baseline adoption: selected for this documentation task within existing user instructions. Handbook still labels shared scope/modules seeded/draft; no new global rule ratification is inferred. Project-specific approved decisions control their own scope.
 
-## 3. Project-specific requirements
+## 4. Must-retain behavior
 
-- Preserve distinction between student-level evidence and teacher/school-level aggregation.
-- Labels such as Priority, Monitor, Aligned, and Strength must have documented definitions and reproducible logic.
-- Item/teacher/school reports must trace back to the underlying assessment data.
-- Do not infer individual mastery behavior merely because the ecosystem also includes GradePal.
+The detailed scope above is the feature-preservation inventory. Preserve existing settings, data, accepted content, assets, exports and compatibility confirmed in source. Distinguish implemented behavior, accepted pending changes and historical requests during intake. A missing entry in this brief is not authorization to remove working behavior. Preserve valid user work during migrations and failures.
 
-## 4. Preserve from the current accepted project
+## 5. Source, release and deployment discipline
 
-- OVERVIEW.
-- ITEM EXPLORER.
-- TEACHER REPORTS.
-- SCHOOL REPORT.
-- METHOD.
-- DATA DIVE REPORT.
-- Priority / Monitor / Aligned / Strength analytical framework where present in the source.
+Existing DataDiver.html recorded; DataDiver_NEW.html also recorded. Compare bytes/features before selecting canonical copy; no assumption based on filename.
 
-## 5. Relationship to other projects
+Record exact selected source filename/hash and repository commit when importing it; record live URL/version only after actually opening it. Unknown commit does not mean the product is unbuilt.
 
-- Institutional analytics counterpart to GradePal's learner-level model.
-- May consume assessment evidence from TestForge/benchmarks in future explicit integrations.
+DESIGN → CHANGE SPEC → IMPLEMENT → CHECKPOINT → VERIFY → VERIFIED CHECKPOINT → RELEASE → DEPLOY.
 
-A conceptual relationship is not proof of an implemented integration. Do not invent a shared API, data schema, identity layer, or deployment dependency without an explicit integration task.
+Use “implementation checkpoint” or “release candidate” before verification. Preserve candidate bytes and logs before packaging; recover that checkpoint after a ZIP/upload failure. Do not rebuild a verified implementation to fix delivery. Repository upload and website deployment are different operations; existing automatic deployments may run when main changes.
 
-## 6. Source and version discipline
+## 6. Known issues, conflicts and open evidence
 
-The exact current source artifact or repository commit must be identified before a substantive build. If the field above says the source is not yet established, first locate the latest known-good local file/ZIP or existing repository state and record its exact identity here.
+Duplicate source candidates unresolved. Statistical thresholds and label mappings must be read from selected source and tested, not rebuilt from this synopsis. No production-readiness claim.
 
-For substantial revisions use:
+| Conflict or risk | Required handling |
+| --- | --- |
+| Historical claim versus current source | Inspect exact source; keep historical claim labeled until verified. |
+| Proposed next scope versus working baseline | Use the approved version-specific specification; do not silently promote proposals. |
+| Other project rules | Do not import AAC quotas, other-game retry counts, or a shared backend without explicit scope. |
+| Handbook proposals | No additional exception or proposal is adopted by this brief. |
 
-**DESIGN → CHANGE SPEC → IMPLEMENT → CHECKPOINT → VERIFY → VERIFIED CHECKPOINT → RELEASE → DEPLOY (when applicable)**
+## 7. Verification contract
 
-A packaging/export/deployment failure must not force reconstruction of an already verified build.
+Reconcile counts and normalized scores by hand; verify leave-target-out comparison groups, Welch/FDR results, edge samples, label boundaries and exported reports without student-data transmission.
 
-## 7. Definition of done
+| Evidence required | Result in this task |
+| --- | --- |
+| Exact source candidate/commit identified and preserved | Not run — documentation revision only |
+| Project-specific checks above, with inputs and expected/actual results | Not run |
+| Save/import/export and malformed-input regression | Not run |
+| Intended devices and real deployment path, where applicable | Not run |
+| Version, release notes and delivered bytes agree | Not run |
 
-| # | Requirement / check | Result | Evidence / limitation |
-| ---: | --- | --- | --- |
-| 1 | Imported/source assessment data is parsed correctly. | Not run | |
-| 2 | Item-level metrics reproduce independently checked calculations. | Not run | |
-| 3 | Teacher/school aggregation is correct. | Not run | |
-| 4 | Analytical labels follow the documented method. | Not run | |
-| 5 | Exported reports match on-screen data and source scope. | Not run | |
+The next build report must name the candidate, environment and test results; historical reports of passing tests do not transfer to a changed candidate.
 
-Allowed results: **Passed / Failed / Not run / Not applicable**. A "Passed" result requires an actual check against the identified candidate.
+## 8. Handoff and provenance
 
-## 8. Known issues and migration notes
+Required project records: DataDiver.html and DataDiver_NEW.html; synthetic GradeCam fixtures; method/report definitions.
 
-Do not claim current integrations or production readiness until the actual source and data contracts are established.
+Provenance: previous migration brief and project-history audit in this conversation; directly read dossier/proposal where explicitly stated above. Records not explicitly marked read here are retrieval targets, not claims of fresh inspection. No current app code was tested for this brief.
 
-## 9. Handoff files
+Before substantive implementation retrieve these records, the current source, approved change spec and applicable handbook. If an indispensable spec is inaccessible, report the gap instead of filling it with invented details. Do not delete unique historical chats/assets until their contents are independently preserved.
 
-A substantive AI implementation task should retrieve or receive:
+## 9. Ecosystem boundary
 
-1. `AI-START-HERE.md`;
-2. `UNIVERSAL-RULES.md`;
-3. the relevant sections of `CONDITIONAL-STANDARDS.md`;
-4. this project brief;
-5. the exact current source artifact/commit;
-6. the approved version-specific change specification;
-7. applicable assets and deployment configuration.
+Shared principles do not establish shared code, accounts or interfaces. MathQuest is engagement, TestForge assessment design, GradePal learner-level evidence, and DataDiver institutional analytics. Integration remains separately specified unless confirmed in source. Other projects remain independent unless their brief explicitly says otherwise.
 
-Do not reconstruct the current implementation from a historical chat summary when the actual source should be available.
-
-## 10. Ownership
-
-**William McAda**  
-**A WILLIAM MCADA PRODUCT**
