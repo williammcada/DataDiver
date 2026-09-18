@@ -1,12 +1,12 @@
 # Project Brief — DataDiver
 
-**Brief version:** 0.2 — audited documentation revision  
+**Brief version:** 0.3 — source-baseline normalization  
 **Owner:** William McAda · **Credit:** A WILLIAM MCADA PRODUCT  
-**Status:** Revised record for owner review; not an application release or fresh feature approval.  
-**Repository destination:** williammcada/DataDiver (verify existence/current branch before source edits).  
-**Current running version:** Not independently verified in this documentation task.  
-**Source/baseline:** Existing DataDiver.html recorded; DataDiver_NEW.html also recorded. Compare bytes/features before selecting canonical copy; no assumption based on filename.  
-**Next work:** Identify current offline source and preserve statistical/reporting behavior.
+**Status:** Canonical source identity reconciled; release, functional and deployment verification remain separately stated.  
+**Repository:** `williammcada/DataDiver`, branch `main`.  
+**Current running version:** Not independently verified. Exact committed v15 source identity and byte preservation are established.  
+**Source/baseline:** Canonical preserved source: `DataDiver_v15_PolarAquatic_CaptionFix.html`, Git blob `3b78f3f99ddddf2507971c422bec3095379e80e2`, at source checkpoint `94233db3e9f9f731f59761282a023cf5edda5572`.  
+**Next work:** Use the committed v15 source as the canonical preservation baseline and verify the offline analytics/import/report workflow before further revision.  
 
 ## 1. Purpose, audience and detailed scope
 
@@ -21,7 +21,7 @@
 
 ## 2. This task and boundaries
 
-This revision repairs documentation only. It does not implement features, run application tests, upload source, deploy a site, or alter a repository. Retain the exact current source before implementation. Historical reported functionality is a preservation checklist to reconcile against that source, not permission to recreate the program from prose.
+This normalization establishes the exact repository source path, Git object identity and source-preservation checkpoint; creates the linked migration baseline; and retires stale pre-upload source-status wording. It does not change application behavior, approve new features, rerun product tests or convert source preservation into a release claim.
 
 ## 3. Standards and adoption
 
@@ -36,17 +36,17 @@ The detailed scope above is the feature-preservation inventory. Preserve existin
 
 ## 5. Source, release and deployment discipline
 
-Existing DataDiver.html recorded; DataDiver_NEW.html also recorded. Compare bytes/features before selecting canonical copy; no assumption based on filename.
+Canonical preserved source: `DataDiver_v15_PolarAquatic_CaptionFix.html`, Git blob `3b78f3f99ddddf2507971c422bec3095379e80e2`, at source checkpoint `94233db3e9f9f731f59761282a023cf5edda5572`.
 
-Record exact selected source filename/hash and repository commit when importing it; record live URL/version only after actually opening it. Unknown commit does not mean the product is unbuilt.
+See [`MIGRATION-BASELINE.md`](MIGRATION-BASELINE.md) for the authoritative source manifest and the checks actually performed.
 
 DESIGN → CHANGE SPEC → IMPLEMENT → CHECKPOINT → VERIFY → VERIFIED CHECKPOINT → RELEASE → DEPLOY.
 
-Use “implementation checkpoint” or “release candidate” before verification. Preserve candidate bytes and logs before packaging; recover that checkpoint after a ZIP/upload failure. Do not rebuild a verified implementation to fix delivery. Repository upload and website deployment are different operations; existing automatic deployments may run when main changes.
+Use “implementation checkpoint” or “release candidate” before verification. Preserve candidate bytes and logs before packaging; recover that checkpoint after a ZIP/upload failure. Do not rebuild a verified implementation to fix delivery. Repository upload and website deployment are different operations.
 
 ## 6. Known issues, conflicts and open evidence
 
-Duplicate source candidates unresolved. Statistical thresholds and label mappings must be read from selected source and tested, not rebuilt from this synopsis. No production-readiness claim.
+The canonical preserved file is now identified as `DataDiver_v15_PolarAquatic_CaptionFix.html`. Statistical thresholds and label mappings still require exact-source inspection and functional testing; source selection does not establish production readiness.
 
 | Conflict or risk | Required handling |
 | --- | --- |
@@ -61,7 +61,7 @@ Reconcile counts and normalized scores by hand; verify leave-target-out comparis
 
 | Evidence required | Result in this task |
 | --- | --- |
-| Exact source candidate/commit identified and preserved | Not run — documentation revision only |
+| Exact source candidate/commit identified and preserved | Passed — canonical path and source checkpoint recorded in `docs/MIGRATION-BASELINE.md`; no functional verification inferred |
 | Project-specific checks above, with inputs and expected/actual results | Not run |
 | Save/import/export and malformed-input regression | Not run |
 | Intended devices and real deployment path, where applicable | Not run |
@@ -71,7 +71,9 @@ The next build report must name the candidate, environment and test results; his
 
 ## 8. Handoff and provenance
 
-Required project records: DataDiver.html and DataDiver_NEW.html; synthetic GradeCam fixtures; method/report definitions.
+Current source identity is recorded in [`MIGRATION-BASELINE.md`](MIGRATION-BASELINE.md). That manifest supersedes earlier unknown-source or pre-upload statements while preserving the original migration note as history.
+
+Required project records: committed `DataDiver_v15_PolarAquatic_CaptionFix.html`; synthetic GradeCam fixtures; method/report definitions; any earlier candidates retained only as explicitly historical records.
 
 Provenance: previous migration brief and project-history audit in this conversation; directly read dossier/proposal where explicitly stated above. Records not explicitly marked read here are retrieval targets, not claims of fresh inspection. No current app code was tested for this brief.
 
@@ -80,4 +82,3 @@ Before substantive implementation retrieve these records, the current source, ap
 ## 9. Ecosystem boundary
 
 Shared principles do not establish shared code, accounts or interfaces. MathQuest is engagement, TestForge assessment design, GradePal learner-level evidence, and DataDiver institutional analytics. Integration remains separately specified unless confirmed in source. Other projects remain independent unless their brief explicitly says otherwise.
-
